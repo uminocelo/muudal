@@ -9,9 +9,11 @@ config :muudal, Muudal.Repo,
   username: "muudal_user",
   password: "muudal_password_123",
   hostname: "localhost",
-  database: "muudal_test#{System.get_env("MIX_TEST_PARTITION")}",
-  pool: Ecto.Adapters.SQL.Sandbox,
-  pool_size: 10
+  database: "petacular_test",
+  show_sensitive_data_on_connection_error: true,
+  port: 5432,
+  pool_size: 10,
+  pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.

@@ -1,4 +1,5 @@
 defmodule MuudalWeb.Router do
+  alias MuudalWeb.Page.HomeLive
   use MuudalWeb, :router
 
   pipeline :browser do
@@ -17,7 +18,7 @@ defmodule MuudalWeb.Router do
   scope "/", MuudalWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live("/", HomeLive)
   end
 
   # Other scopes may use custom stacks.

@@ -6,6 +6,7 @@ config :muudal, Muudal.Repo,
   password: "muudal_password_123",
   hostname: "localhost",
   database: "muudal_dev",
+  port: 5432,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

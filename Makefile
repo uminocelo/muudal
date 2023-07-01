@@ -2,13 +2,17 @@
 
 full_start: deps db_hidden start
 
-db_hidden: docker-compose up -d postgres
+db_hidden: 
+						docker-compose up -d postgres
 
-db: docker-compose up postgres
+db:
+		docker-compose up postgres
 
-start: iex -S mix phx.server
+start: 
+			iex -S mix phx.server
 
-stop_db: docker-compose down
+stop_db: 
+				docker-compose down
 
 migrate: 
 				mix do ecto.migrate, ecto.dump
